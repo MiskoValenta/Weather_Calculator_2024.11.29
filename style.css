@@ -1,0 +1,125 @@
+body {
+  background: url(./3.jpg) no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font: 1rem 'Poppins', sans-serif;
+  margin: 0;
+  color: var(--text-color);
+}
+
+:root {
+  --primary-color: #492121;
+  --secondary-color: #333;
+  --border-color: #f1f1f1;
+  --background-color: rgba(51, 51, 51, 0.8); 
+  --box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  --text-color: #f5f5f5; 
+  --glow-color: rgba(255, 255, 255, 0.6); 
+  --button-color: #0668cf;
+  --button-hover-color: #055bb5;
+}
+
+#Heading {
+  font-size: 4rem;
+  color: var(--text-color);
+  text-align: center;
+  margin-top: 2rem;
+  font-weight: 700;
+  display: inline-block;
+  text-shadow: 0 0 2px var(--glow-color), 0 0 20px var(--glow-color), 0 0 30px var(--glow-color); 
+}
+#Heading:hover{
+  text-shadow: 0 0 5px var(--glow-color), 0 0 25px var(--glow-color), 0 0 35px var(--glow-color); 
+  cursor: pointer;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+#Window {
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  background: var(--background-color);
+  border-radius: 15px;
+  box-shadow: 0 0 20px var(--glow-color), 0 0 40px var(--glow-color), 0 0 30px var(--glow-color);
+  display: grid;
+  place-items: center;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 1s ease-in-out;
+  color: var(--text-color); 
+  transition: box-shadow 0.3s ease;
+}
+
+#Window:hover {
+  box-shadow: 0 0 30px var(--glow-color), 0 0 60px var(--glow-color), 0 0 90px var(--glow-color);
+}
+
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
+}
+
+form {
+  max-width: 400px;
+  margin: 7px auto;
+  text-align: center;
+}
+
+label, select, input, button {
+  margin: 10px 0;
+  display: block;
+  width: 100%;
+  font-size: 1.25em;
+  font-weight: 700;
+  color: var(--text-color); 
+}
+
+input, select {
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-color);
+  font-weight: 500;
+  font-size: 1.15rem;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+#unit option{
+  background: var(--background-color);	
+}
+
+input:focus, select:focus {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--text-color);
+  outline: none;
+}
+
+button {
+  padding: 10px;
+  background-color: var(--button-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; 
+}
+
+button:hover {
+  background-color: var(--button-hover-color);
+}
+#Heading a{
+  text-decoration: none;
+  color: var(--text-color);
+}
